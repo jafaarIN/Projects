@@ -20,8 +20,3 @@ It is a very minamilistic project, so there are some limitations that could defi
 ## Requirements
 - Python 3.6+
 - Unix-like terminal with `curses` support (Linux/macOS)
-
-## Limitations
-- No textures, lighting, or 3D objects
-- ASCII-only visualization
-- Single enemy and no AI logic
