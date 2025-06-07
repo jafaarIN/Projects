@@ -2,9 +2,10 @@
 # XSS Cross-Site Scripting Lab
 
 Streamlit link: https://xss-lab.streamlit.app/
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://xss-lab.streamlit.app/)
 
 An interactive Streamlit app that demonstrates how Cross-Site Scripting (XSS) attacks work; from injection and execution to bypassing filters and defending against them.
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://xss-lab.streamlit.app/)
 
 ## What's Inside
 
