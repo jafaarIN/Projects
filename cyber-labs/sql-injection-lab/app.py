@@ -2,10 +2,10 @@ import streamlit as st
 import html
 
 st.set_page_config(page_title="XSS demonstration", layout="wide")
-st.title("XSS Attacks Explained")
+st.title("SQL-Injection Attacks Explained")
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    "Finding XSS", 
+    "Finding SQL-Injection Vectors", 
     "Exploiting", 
     "Simulate", 
     "Bypass", 
