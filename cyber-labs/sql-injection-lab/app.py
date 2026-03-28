@@ -13,19 +13,15 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
 ])
 
 with tab1:
-    st.subheader("How Hackers Find XSS")
+    st.subheader("How Hackers Find Possible SQL-Injection Vectors")
     st.markdown("""
-Hackers typically find XSS vulnerabilities through:
+Hackers typically find said vectors through:
 
 1. Inspecting inputs like search forms, comment boxes, login fields.
-2. Reflected responses, i.e, does input appear in HTML output?
-3. Manual injection:
-```html
-<script>alert('XSS')</script>
-```
-4. Using tools:
-   - [XSStrike](https://github.com/s0md3v/XSStrike)
-   - [XSSer](https://github.com/epsylon/xsser)
+2. Inspecting any internal service where communication to a DBMS (Database Management Service) occurs.
+3. Using tools:
+   - [SQLmap](https://github.com/sqlmapproject/sqlmap)
+   - [Burp Suite](https://portswigger.net/burp/communitydownload)
    
 **Here's an example on how XSSer can be used to find parameters succeptable to XSS:**
 """)
