@@ -68,7 +68,7 @@ with tab3:
 *Step 1:*
 Identifying input field
 """)
-    st.image("step1.png", caption="The two input fields here are the username and password field.", use_column_width=True)
+    st.image("cyber-labs/sql-injection-lab/step1", caption="The two input fields here are the username and password field.", use_column_width=True)
     st.markdown("---")
     st.subheader("Rendered Output")
 
