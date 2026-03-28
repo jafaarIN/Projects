@@ -6,8 +6,8 @@ st.title("SQL-Injection Attacks Explained")
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "Finding SQL-Injection Vectors", 
-    "Exploiting", 
-    "Simulate", 
+    "Post Exploitation", 
+    "Exploit Walkthrough", 
     "Bypass", 
     "Defend"
 ])
@@ -63,34 +63,14 @@ Tools often used:
 symbols = ["<", ">", "&"]
 
 with tab3:
-    st.subheader("XSS Simulation")
+    st.subheader("Refer to the video in the first tab:")
     st.markdown("""
-Try injecting HTML/JS below. Toggle views to see the difference.
+*Step 1:*
+Identifying input field
 """)
-
-    user_input = st.text_area("User Input", "<b>Hello!</b>", height=100)
-    view_mode = st.radio("Choose rendering mode:", ["Safe View (Sanitized)", "Vulnerable View (Raw HTML)"])
 
     st.markdown("---")
     st.subheader("Rendered Output")
-
-    if view_mode == "Safe View (Sanitized)":
-        sanitized = html.escape(user_input)
-        st.code(sanitized)
-        st.markdown(f"```")
-        st.markdown(sanitized)
-        st.markdown("```")
-        st.success("Output escaped. No scripts run.")
-    else:
-        st.markdown(user_input, unsafe_allow_html=True)
-        if "<script" in user_input.lower():
-            st.warning("Now, the injected code would run as Javascript here in a real vulnerable site")
-            st.warning("For example, if you had ran '<script>alert(1)</script>', you would see a pop-up on an actual vulnerable site that says '1'")
-        else:
-            for symbol in symbols:
-                if symbol in user_input:
-                    st.error("Vulnerable: Input rendered as raw HTML.")
-                    break
 
 with tab4:
     st.subheader("Bypassing Filters")
