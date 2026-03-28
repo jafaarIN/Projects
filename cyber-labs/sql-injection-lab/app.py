@@ -1,7 +1,7 @@
 import streamlit as st
 import html
 
-st.set_page_config(page_title="XSS demonstration", layout="wide")
+st.set_page_config(page_title="SQLi demonstration", layout="wide")
 st.title("SQL-Injection Attacks Explained")
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
@@ -25,7 +25,7 @@ Hackers typically find said vectors through:
    
 **Here's an example on how XSSer can be used to find parameters succeptable to XSS:**
 """)
-    st.video("https://youtu.be/QMl3rtW1_cw")
+    st.video("https://www.youtube.com/watch?v=SKKVcPjaIqI")
     st.markdown("""
     5. Inspecting dev tools: Look for unsafe DOM injections.
 
