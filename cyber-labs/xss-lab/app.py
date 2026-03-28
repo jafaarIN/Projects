@@ -29,10 +29,6 @@ Hackers typically find XSS vulnerabilities through:
    
 **Here's an example on how XSSer can be used to find parameters succeptable to XSS:**
 """)
-    video_path = "cyber-labs/xss-lab/xsser.mp4"
-    with open(video_path, "rb") as video_file:
-        video_bytes = video_file.read()
-    st.video(video_bytes)
     st.markdown("""
     5. Inspecting dev tools: Look for unsafe DOM injections.
 
