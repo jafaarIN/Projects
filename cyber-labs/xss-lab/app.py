@@ -29,6 +29,7 @@ Hackers typically find XSS vulnerabilities through:
    
 **Here's an example on how XSSer can be used to find parameters succeptable to XSS:**
 """)
+    st.video("https://youtu.be/QMl3rtW1_cw")
     st.markdown("""
     5. Inspecting dev tools: Look for unsafe DOM injections.
 
