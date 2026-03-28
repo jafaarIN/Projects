@@ -15,7 +15,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
 with tab1:
     st.subheader("How Hackers Find Possible SQL-Injection Vectors")
     st.markdown("""
-Hackers typically find said vectors through:
+Hackers typically find/exploit said vectors through:
 
 1. Inspecting inputs like search forms, comment boxes, login fields.
 2. Inspecting any internal service where communication to a DBMS (Database Management Service) occurs.
@@ -23,7 +23,7 @@ Hackers typically find said vectors through:
    - [SQLmap](https://github.com/sqlmapproject/sqlmap)
    - [Burp Suite](https://portswigger.net/burp/communitydownload)
    
-**Here's an example on how XSSer can be used to find parameters succeptable to XSS:**
+**Here's an example on how SQLmap can be used to test parameters possibly succeptable to SQL injections:**
 """)
     st.video("https://www.youtube.com/watch?v=SKKVcPjaIqI")
     st.markdown("""
