@@ -102,7 +102,9 @@ with tab5:
     st.markdown("**4. Avoid dynamic query building:** This is arguably one of the most important measures to take")
     st.markdown("---")
     st.markdown("**5. Error Handling:** Don't expose:")
-```SQL
-sqlite error near 'OR'
-```
+    st.markdown("""
+    ```SQL
+    sqlite error near 'OR'
+    ```
+    """)
     st.markdown("**6. Web Application Firewall (WAF):** Detects patterns and blocks suspicious requests, should not be the sole fix towards SQLi vulnerabilities, but rather an additional layer of security.")
