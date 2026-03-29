@@ -63,7 +63,7 @@ Tools often used:
 symbols = ["<", ">", "&"]
 
 with tab3:
-    st.subheader("Refer to the video in the first tab:")
+    st.subheader("*DO NOT RECREATE ON SERVICES YOU DO NOT OWN OR HAVE EXPLICIT PERMISSION TO USE ON, THIS IS FOR EDUCATIONAL PURPOSES ONLY AND ALL DEMONSTRATIONS SHOWN HAVE BEEN PERFORMED ON SERVICES I MYSELF HAVE CREATED FOR THE SOLE PURPOSE OF THIS DEMONSTRATION* Refer to the video in the first tab:")
     st.markdown("**Step 1:** Identifying input field")
     st.image("cyber-labs/sql-injection-lab/step1", caption="The two input fields here are the username and password field.", use_container_width=True)
     st.markdown("---")
@@ -72,6 +72,13 @@ with tab3:
     st.markdown("---")
     st.markdown("**Step 3:** Experiment with the parameters using SQLmap, use different tests/techniques/tamper scripts/configurations")
     st.image("cyber-labs/sql-injection-lab/step3.png", caption="The specific script used in the demonstration was: sqlmap -u 'http://127.0.0.1:5000/login' --data='username=test&password=test' --level=5 --risk=3 --time-sec=2 --dbs --tables", use_container_width=True)
+    st.markdown("---")
+    st.markdown("**Step 4:** If success is faced in step 3, you can begin data exfiltration from the databases")
+    st.image("cyber-labs/sql-injection-lab/step4.png", caption="From here you simple use --dump parameters alongside -T or -D parameters", use_container_width=True)
+    st.markdown("---")
+    st.markdown("**Step 5:** Post exploitation")
+    st.image("cyber-labs/sql-injection-lab/step5.png", caption="At this stage attackers can do anything from using data from the database to do things like compromise user accounts, or delete entries/add entries.", use_container_width=True)
+
 
 with tab4:
     st.subheader("Bypassing Filters")
