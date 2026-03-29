@@ -81,50 +81,34 @@ with tab3:
 
 
 with tab4:
-    st.subheader("Bypassing Filters")
+    st.subheader("Bypassing Firewalls")
     st.markdown("""
 Attackers evade protections using:
-
-- Obfuscation:
-```html
-<scr<script>ipt>alert(1)</script>
-```
-- Encoded tags:
-```html
-%3Cscript%3Ealert(1)%3C/script%3E
-```
-- Alternate vectors:
-```html
-<input onfocus=alert(1) autofocus>
-<svg onload=alert(1)>
-```
-
-Advanced tools generate bypass payloads:
-- XSStrike fuzzes and finds filtered contexts
-- Burp Suite encodes payloads in real time
+1. Using correct ports
+2. Obfuscating/encoding
+3. Using tamper scripts
+4. Tunnelling
+4. Misconfiguration exploitation
 """)
 
 with tab5:
-    st.subheader("How Developers Prevent XSS")
+    st.subheader("How Developers Prevent SQLi vulnerabilities")
     st.markdown("""
-To defend against XSS
+To defend against SQLi
 
-1. Escape Output:
-   - Encode `<`, `>`, `"`, `'`, and `&`
-   - Use `html.escape()` or frameworks with built-in escaping
-
-2. Validate Input:
-   - Use allowlists for expected content (e.g., `a-z`, `0-9`)
-   - Strip HTML if not explicitly needed
-
-3. Use Secure Functions:
-   - Prefer `textContent` over `innerHTML`
-   - Avoid direct DOM manipulation with user data
-
-4. Security Headers:
-   - `Content-Security-Policy`: disallow inline scripts
-   - `X-XSS-Protection`: legacy browser protection
-
-5. Libraries:
-   - Use [DOMPurify](https://github.com/cure53/DOMPurify) for safe HTML sanitization
+**1. Use parameterised queries (prepared statements)**
+This stops input from becoming SQL statements
+**2. Input validation**
+Check input characteristics such as length, type, format. 
+**3. ORM usage *(safer by default typically)**
+Frameworks like [SQLAlchemy](https://www.sqlalchemy.org/) or [Django ORM](https://github.com/django/django) automatically handle parameterisation.
+**4. Avoid dynamic query building**
+This is arguably one of the most important measures to take
+**5. Error Handling**
+Don't expose:
+```SQL
+sqlite error near 'OR'
+```
+6. Web Application Firewall (WAF)
+Detects patterns and blocks suspicious requests, should not be the sole fix towards SQLi vulnerabilities, but rather an additional layer of security.
 """)
