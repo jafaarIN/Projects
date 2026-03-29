@@ -93,22 +93,16 @@ Attackers evade protections using:
 
 with tab5:
     st.subheader("How Developers Prevent SQLi vulnerabilities")
-    st.markdown("""
-To defend against SQLi
-
-**1. Use parameterised queries (prepared statements)**
-This stops input from becoming SQL statements
-**2. Input validation**
-Check input characteristics such as length, type, format. 
-**3. ORM usage *(safer by default typically)**
-Frameworks like [SQLAlchemy](https://www.sqlalchemy.org/) or [Django ORM](https://github.com/django/django) automatically handle parameterisation.
-**4. Avoid dynamic query building**
-This is arguably one of the most important measures to take
-**5. Error Handling**
-Don't expose:
+    st.markdown("**1. Use parameterised queries (prepared statements):** This stops input from becoming SQL statements"
+    st.markdown("---")
+    st.markdown("**2. Input validation:** Check input characteristics such as length, type, format.")
+    st.markdown("---")
+    st.markdown("**3. ORM usage *(safer by default typically):** Frameworks like [SQLAlchemy](https://www.sqlalchemy.org/) or [Django ORM](https://github.com/django/django) automatically handle parameterisation.")
+    st.markdown("---")
+    st.markdown("**4. Avoid dynamic query building:** This is arguably one of the most important measures to take")
+    st.markdown("---")
+    st.markdown("**5. Error Handling:** Don't expose:")
 ```SQL
 sqlite error near 'OR'
 ```
-6. Web Application Firewall (WAF)
-Detects patterns and blocks suspicious requests, should not be the sole fix towards SQLi vulnerabilities, but rather an additional layer of security.
-""")
+    st.markdown("**6. Web Application Firewall (WAF):** Detects patterns and blocks suspicious requests, should not be the sole fix towards SQLi vulnerabilities, but rather an additional layer of security.")
