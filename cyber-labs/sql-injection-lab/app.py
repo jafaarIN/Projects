@@ -93,7 +93,7 @@ Attackers evade protections using:
 
 with tab5:
     st.subheader("How Developers Prevent SQLi vulnerabilities")
-    st.markdown("**1. Use parameterised queries (prepared statements):** This stops input from becoming SQL statements"
+    st.markdown("**1. Use parameterised queries (prepared statements):** This stops input from becoming SQL statements")
     st.markdown("---")
     st.markdown("**2. Input validation:** Check input characteristics such as length, type, format.")
     st.markdown("---")
