@@ -69,6 +69,9 @@ with tab3:
     st.markdown("---")
     st.markdown("**Step 2:** Intercept request *(Using either Burp Suite or a browser's inbuilt developer tools)*")
     st.image("cyber-labs/sql-injection-lab/step2.png", caption="These will be used as the target parameters when using SQLmap", use_container_width=True)
+    st.markdown("---")
+    st.markdown("**Step 3:** Experiment with the parameters using SQLmap, use different tests/techniques/tamper scripts/configurations")
+    st.image("cyber-labs/sql-injection-lab/step3.png", caption="The specific script used in the demonstration was: sqlmap -u 'http://127.0.0.1:5000/login' --data='username=test&password=test' --level=5 --risk=3 --time-sec=2 --dbs --tables", use_container_width=True)
 
 with tab4:
     st.subheader("Bypassing Filters")
