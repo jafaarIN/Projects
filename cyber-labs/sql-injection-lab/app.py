@@ -107,4 +107,5 @@ with tab5:
     sqlite error near 'OR'
     ```
     """)
+    st.markdown("---")
     st.markdown("**6. Web Application Firewall (WAF):** Detects patterns and blocks suspicious requests, should not be the sole fix towards SQLi vulnerabilities, but rather an additional layer of security.")
