@@ -64,13 +64,11 @@ symbols = ["<", ">", "&"]
 
 with tab3:
     st.subheader("Refer to the video in the first tab:")
-    st.markdown("""
-*Step 1:*
-Identifying input field
-""")
+    st.markdown("**Step 1:** Identifying input field")
     st.image("cyber-labs/sql-injection-lab/step1", caption="The two input fields here are the username and password field.", use_container_width=True)
     st.markdown("---")
-    st.subheader("Rendered Output")
+    st.markdown("**Step 2:** Intercept request *(Using either Burp Suite or a browser's inbuilt developer tools)*")
+    st.image("cyber-labs/sql-injection-lab/step2.png", caption="These will be used as the target parameters when using SQLmap", use_container_width=True)
 
 with tab4:
     st.subheader("Bypassing Filters")
