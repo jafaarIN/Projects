@@ -63,7 +63,7 @@ Tools often used:
 symbols = ["<", ">", "&"]
 
 with tab3:
-    st.subheader("*DO NOT RECREATE ON SERVICES YOU DO NOT OWN OR HAVE EXPLICIT PERMISSION TO USE ON, THIS IS FOR EDUCATIONAL PURPOSES ONLY AND ALL DEMONSTRATIONS SHOWN HAVE BEEN PERFORMED ON SERVICES I MYSELF HAVE CREATED FOR THE SOLE PURPOSE OF THIS DEMONSTRATION* Refer to the video in the first tab:")
+    st.subheader("**DO NOT RECREATE ON SERVICES YOU DO NOT OWN OR HAVE EXPLICIT PERMISSION TO USE ON, THIS IS FOR EDUCATIONAL PURPOSES ONLY AND ALL DEMONSTRATIONS SHOWN HAVE BEEN PERFORMED ON SERVICES I MYSELF HAVE CREATED FOR THE SOLE PURPOSE OF THIS DEMONSTRATION**: Refer to the video in the first tab:")
     st.markdown("**Step 1:** Identifying input field")
     st.image("cyber-labs/sql-injection-lab/step1", caption="The two input fields here are the username and password field.", use_container_width=True)
     st.markdown("---")
