@@ -1,4 +1,4 @@
-# 💡 CLI-Based Word Autosuggestor with Feedback-Driven learning
+# CLI Based Word Autosuggestor with Feedback Driven learning
 
 This is a simple word autosuggestion system written in Python. It takes a block of natural language text, splits it into word pairs then suggest the next word based on user input and pair frequency.
 
